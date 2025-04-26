@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Главная</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        h6 {
+            font-size: 10px;
+        }
+        .sidebar {
+            position: fixed;
+            top: 0; left: 0; bottom: 0; right: auto;
+            overflow-y: auto;
+            width : 150px;
+            height: 100vh; /* Высота блока равна высоте окна браузера */
+            background-color: #212529; /* Цвет фона */
+            color: white; /* Цвет текста внутри бокового меню */
+        }
+        .sidebar hr {
+            margin-top: 10px; /* Верхний отступ от заголовка */
+            margin-bottom: 10px; /* Нижний отступ до первого пункта меню */
+            border-color: rgba(255, 255, 255, 0.3); /* Тонкая белая граница */
+        }
+        .sidebar .btn {
+            text-align: left !important; /* принудительное выравнивание текста влево */
+        }
+        .sidebar .bottom-btn {
+            position: absolute; /* Абсолютное позиционирование */
+            bottom: 0; /* Расположить внизу */
+            width: 100%; /* Заставить кнопку занять всю ширину */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+
+    <h5 style = "padding-left: 10px;">Меню</h5></p>
+    <hr />
+    <a class="btn btn-primary w-100 mb-1" href = "contacts.html"><h6>Главная</h6></a>
+    <a class="btn btn-dark w-100 mb-1" href = "contacts.html"><h6>Категория</h6></a>
+    <a class="btn btn-primary w-100 mb-1" href = "contacts.html"><h6>Заказы</h6></a>
+    <a class="btn btn-primary w-100 mb-1" href = "contacts.html"><h6>Контакты</h6></a>
+    <hr />
+    <div class="bottom-btn">
+        <div class="btn-group" role="group">
+        <button type="button" class="btn btn-dark w-100 mb-1 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+          Пользователь
+        </button>
+        <ul class="dropdown-menu">
+          <li><h5> Профиль </h5></li>
+          <li><a class="dropdown-item" href="Выход">Dropdown link</a></li>
+        </ul>
+  </div>
+
+ </div>
+
+</body>
+</html>
+
