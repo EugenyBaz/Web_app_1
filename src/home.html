@@ -20,7 +20,7 @@
         }
         .sidebar hr {
             margin-top: 10px; /* Верхний отступ от заголовка */
-            margin-bottom: 10px; /* Нижний отступ до первого пункта меню */
+
             border-color: rgba(255, 255, 255, 0.3); /* Тонкая белая граница */
         }
         .sidebar .btn {
@@ -35,28 +35,95 @@
     </style>
 </head>
 <body>
-    <div class="sidebar">
+<div class="container-fluid mt-3">
+    <div class="row">
+        <div class="col-md-3 col-lg-2">
+            <div class="sidebar">
+                <h5 style = "padding-left: 10px;">Меню</h5>
+                <hr />
+                <a class="btn btn-primary w-100 mb-1" href = "contacts.html"><h6>Главная</h6></a>
+                <a class="btn btn-dark w-100 mb-1" href = "contacts.html"><h6>Категория</h6></a>
+                <a class="btn btn-dark w-100 mb-1" href = "contacts.html"><h6>Заказы</h6></a>
+                <a class="btn btn-dark w-100 mb-1" href = "contacts.html"><h6>Контакты</h6></a>
 
-    <h5 style = "padding-left: 10px;">Меню</h5></p>
-    <hr />
-    <a class="btn btn-primary w-100 mb-1" href = "contacts.html"><h6>Главная</h6></a>
-    <a class="btn btn-dark w-100 mb-1" href = "contacts.html"><h6>Категория</h6></a>
-    <a class="btn btn-primary w-100 mb-1" href = "contacts.html"><h6>Заказы</h6></a>
-    <a class="btn btn-primary w-100 mb-1" href = "contacts.html"><h6>Контакты</h6></a>
-    <hr />
-    <div class="bottom-btn">
-        <div class="btn-group" role="group">
-        <button type="button" class="btn btn-dark w-100 mb-1 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-          Пользователь
-        </button>
-        <ul class="dropdown-menu">
-          <li><h5> Профиль </h5></li>
-          <li><a class="dropdown-item" href="Выход">Dropdown link</a></li>
-        </ul>
-  </div>
+                <div class="bottom-btn">
+                    <hr />
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-dark w-100 mb-1 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                          Пользователь
+                        </button>
+                        <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="contacts.html">Профиль</a></li>
+                        <li><a class="dropdown-item" href="contacts.html">Выход</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
 
- </div>
 
+        <div class="col-md-10 col-lg-10">
+            <div class="col-10">
+                     <h2 class="text-center my-3">Главная</h2>
+                     <h6 class="text-center my-4"style = "color: gray">Вы находитесь на сайте, предназначенном для продажи товаров.</h6>
+            </div>
+            <div class="row row-cols-1 row-cols-md-3 g-3 my-5">
+
+                <div class="col">
+                    <div class="card border-success mb-3" style="max-width: 15rem;">
+                        <div class="card-header bg-light border-success text-center" style="background-color:#f0f0f0;">Товар 1</div>
+                        <div class="card-body text-success">
+                            <h4 class="text-center card-title" style = "color:black">$ 100</h4>
+                            <p class="text-center card-text" style="color:black">Какой-нибудь очень важный текст.</p>
+
+                        </div>
+                        <div class="text-center card-body">
+                            <a href="#" class="btn btn-outline-primary w-100">Купить</a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card border-success mb-3" style="max-width: 15rem;">
+                        <div class="card-header bg-light border-success text-center" style="background-color:#f0f0f0;">Товар 1</div>
+                        <div class="card-body text-success">
+                            <h4 class="text-center card-title" style = "color:black">$ 100</h4>
+                            <p class="text-center card-text" style="color:black">Какой-нибудь очень важный текст.</p>
+
+                        </div>
+                        <div class="text-center card-body">
+                            <a href="#" class="btn btn-outline-primary w-100">Купить</a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card border-success mb-3" style="max-width: 15rem;">
+                        <div class="card-header bg-light border-success text-center" style="background-color:#f0f0f0;">Товар 1</div>
+                        <div class="card-body text-success">
+                            <h4 class="text-center card-title" style = "color:black">$ 100</h4>
+                            <p class="text-center card-text" style="color:black">Какой-нибудь очень важный текст.</p>
+
+                        </div>
+                        <div class="text-center card-body">
+                            <a href="#" class="btn btn-outline-primary w-100">Купить</a>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/js/bootstrap.bundle.min.js">
+</script>
 </body>
 </html>
 
