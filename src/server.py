@@ -1,30 +1,33 @@
 # Импорт встроенной библиотеки для работы веб-сервера
 from http.server import BaseHTTPRequestHandler, HTTPServer
-import time
+
 
 # Для начала определим настройки запуска
-hostName = "localhost" # Адрес для доступа по сети
-serverPort = 8080 # Порт для доступа по сети
+hostName = "localhost"  # Адрес для доступа по сети
+serverPort = 8080  # Порт для доступа по сети
+
 
 class MyServer(BaseHTTPRequestHandler):
     """
-        Специальный класс, который отвечает за
-        обработку входящих запросов от клиентов
+    Специальный класс, который отвечает за
+    обработку входящих запросов от клиентов
     """
+
     def do_GET(self):
-        """ Метод для обработки входящих GET-запросов """
-        self.send_response(200) # Отправка кода ответа
-        self.send_header("Content-type", "text/html") # Отправка типа данных, который будет передаваться
-        self.end_headers() # Завершение формирования заголовков ответа
-        with open('contacts.html', 'rb') as file:
+        """Метод для обработки входящих GET-запросов"""
+        self.send_response(200)  # Отправка кода ответа
+        self.send_header("Content-type", "text/html")  # Отправка типа данных, который будет передаваться
+        self.end_headers()  # Завершение формирования заголовков ответа
+        with open("contacts.html", "rb") as file:
             content = file.read()
             self.wfile.write(content)
             # Тело ответа
+
     def do_POST(self):
-        """ Метод для обработки входящих POST запросов"""
-        content_length= int(self.headers['Content-Length'])
-        body= self.rfile.read(content_length)
-        decoded_body = body.decode('utf-8')  # Преобразование в строку
+        """Метод для обработки входящих POST запросов"""
+        content_length = int(self.headers["Content-Length"])
+        body = self.rfile.read(content_length)
+        decoded_body = body.decode("utf-8")  # Преобразование в строку
         print("Пользователь ввёл:", decoded_body)
         # Готовим HTML-сообщение благодарности
         success_message = """
@@ -42,8 +45,7 @@ class MyServer(BaseHTTPRequestHandler):
         self.send_response(200)
         self.send_header("Content-type", "text/html; charset=utf-8")
         self.end_headers()
-        self.wfile.write(success_message.encode('utf-8'))
-
+        self.wfile.write(success_message.encode("utf-8"))
 
 
 if __name__ == "__main__":
