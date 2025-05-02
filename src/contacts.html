@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Контакты</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        h6 {
+            font-size: 10px;
+        }
+        .sidebar {
+            position: fixed;
+            top: 0; left: 0; bottom: 0; right: auto;
+            overflow-y: auto;
+            width : 150px;
+            height: 100vh; /* Высота блока равна высоте окна браузера */
+            background-color: #212529; /* Цвет фона */
+            color: white; /* Цвет текста внутри бокового меню */
+        }
+        .sidebar hr {
+            margin-top: 10px; /* Верхний отступ от заголовка */
+
+            border-color: rgba(255, 255, 255, 0.3); /* Тонкая белая граница */
+        }
+        .sidebar .btn {
+            text-align: left !important; /* принудительное выравнивание текста влево */
+        }
+        .sidebar .bottom-btn {
+            position: absolute; /* Абсолютное позиционирование */
+            bottom: 0; /* Расположить внизу */
+            width: 100%; /* Заставить кнопку занять всю ширину */
+        }
+
+    </style>
+</head>
+<body>
+<div class="container-fluid mt-3">
+    <div class="row">
+        <div class="col-md-3 col-lg-2">
+            <div class="sidebar">
+                <h5 style = "padding-left: 10px;">Меню</h5>
+                <hr />
+                <a class="btn btn-dark w-100 mb-1" href = "home.html"><h6>Главная</h6></a>
+                <a class="btn btn-dark w-100 mb-1" href = "category1.html"><h6>Категория</h6></a>
+                <a class="btn btn-dark w-100 mb-1" href = "catalog.html"><h6>Заказы</h6></a>
+                <a class="btn btn-primary w-100 mb-1" href = "contacts.html"><h6>Контакты</h6></a>
+
+                <div class="bottom-btn">
+                    <hr />
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-dark w-100 mb-1 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                          Пользователь
+                        </button>
+                        <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="contacts.html">Профиль</a></li>
+                        <li><a class="dropdown-item" href="contacts.html">Выход</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-10 col-lg-10">
+            <div class="col-10">
+                     <h2 class="text-center my-3">Контакты</h2>
+            </div>
+            <div class="row row-cols-1 row-cols-md-2 g-3 my-5">
+
+                <form action="/" method="post">
+                    <div class="mb-3 w-50">
+                        <label for="nameField" class="form-label">Имя</label>
+                        <input type="text" class="form-control" id="nameField" name = "name" required>
+                    </div>
+                    <div class="mb-3 w-50">
+                        <label for="emailField" class="form-label">e-mail</label>
+                        <input placeholder="@" type="email" class="form-control" id="emailField" name = "email" required>
+                    </div>
+                    <div class="mb-3 w-50">
+                      <label for="exampleFormControlTextarea1" class="form-label">Сообщение</label>
+                      <textarea class="form-control" id="exampleFormControlTextarea1" name="message" rows="3" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Отправить</button>
+                    </form>
+                <div class="col mt-5">
+                    <h3>Наши контакты</h3>
+                    <p class="fw-light my-4">Телефон:  8 (812) -ХХХ-ХХ-ХХ</p>
+                    <p class="fw-light my-4">Адрес: 197046 г. Санкт-Петербург, Заячий остров,1</p>
+                    <p class="fw-light my-4">E-mail: info@xxx.ru</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/js/bootstrap.bundle.min.js">
+</script>
+</body>
+</html>
